@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Oxygen", sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(180deg, rgba(36,36,44,1) 0%, rgba(145,140,146,0) 100%), url(images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    align-items: center;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+
+}
+
+.header .nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0 10px;
+}
+
+.header .nav .nav-item {
+    color: #b3b3b3;
+}
+
+.header .nav .nav-item:hover {
+    color: #fff;
+}
+
+.header .nav .logo {
+    color: #fbd711;
+    font-family: "Pattaya", sans-serif;
+    font-size: 22px;
+}
+
+.text_box {
+    margin: 100px 0;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.text_box .text {
+    margin: 10px 0
+}
+
+.text_box .text_subtitle {
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.text_box .text_title {
+    font-weight: 700;
+    font-size: 70px;
+    font-family: "Pattaya", sans-serif;
+    letter-spacing: 2px;
+}
+.text_box .text_button {
+    padding: 10px 30px;
+    outline: none;
+    background-color: #fbd711;
+    border: none;
+    color: #fff;
+    font-family: "Oxygen", sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.text_box .text_button:hover {
+    background-color: #e2c20f;
+}
+
+@media screen and (min-width: 300px) and (max-width: 480px){
+    .header .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        background-color: #24242C;
+        padding: 10px 0 0 0;
+    } 
+
+    .header .nav .nav-menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100vw;
+    }
+
+    .header .nav .nav-logo {
+        text-align: left;
+    }
+
+    .header .nav .nav-menu .nav-item {
+        padding: 10px 10px;
+        border-bottom: 1px solid #505056;
+    }
+}
