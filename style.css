@@ -171,13 +171,14 @@ body {
 .portifolio-content .content-columns .content-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: #fff;
-    padding: 20px;
+    justify-content: center;
     color: #24242C;
     text-align: center;
     width: 225px;
+    padding: 20px;
     gap: 20px;
+    min-height: 240px;
 }
 
 .portifolio-content .content-columns .content-box .content-text span {
@@ -185,12 +186,30 @@ body {
     font-style: italic;
 }
 
-.portifolio-content .content-columns .content-box .content-image {
-    height: 200px;
-    padding: 10px 0;
+.portifolio-content .content-columns .content-box .content-image img {
+    width: 60%;
 }
 
-@media screen and (min-width: 300px) and (max-width: 480px){
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.about-title {
+    text-align: center;
+}
+
+.about-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 860px){
     .header .nav {
         display: flex;
         flex-direction: column;
@@ -239,6 +258,7 @@ body {
         justify-content: space-around;
         width: 160px;
         height: auto;
+        min-height: 170px;
         padding: 10px 0;
     }
     .portifolio-content .content-columns .content-box .content-image{
