@@ -85,6 +85,8 @@ body {
     background-color: #e2c20f;
 }
 
+/* Serviços */
+
 .services {
     display: flex;
     flex-direction: column;
@@ -96,6 +98,7 @@ body {
 
 .services-title {
     text-align: center;
+    color: #24242C;
 }
 
 .services-title h2 {
@@ -129,6 +132,7 @@ body {
 .services .content-text {
     text-align: center;
     width: 90%;
+    color: #24242C;
 }
 
 .services .content-text h3 {
@@ -158,6 +162,7 @@ body {
 
 .portifolio-content {
     display: flex;
+    flex-direction: row;
     gap: 30px;
 }
 
@@ -189,27 +194,89 @@ body {
 .portifolio-content .content-columns .content-box .content-image img {
     width: 60%;
 }
-
+/* Sobre */
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
     padding: 100px 0;
-}
-
-.about-title {
     text-align: center;
 }
 
-.about-title h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.about-title {
+    margin-bottom: 50px;
+    color: #24242C;
 }
 
-@media screen and (min-width: 300px) and (max-width: 860px){
+.about-box .timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-box .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #24242C;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.about-box .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+
+.about-box .container.left {
+    left: -13.2%;
+}
+
+.container.right {
+    left: 50%;
+}
+
+.about-box .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #24242C;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.about-box .container.right::after {
+    left: -16px;
+}
+
+.about-box .content {
+    padding: 20px 0;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+.about-box .container.left .content {
+    text-align: right;
+}
+
+.about-box .container.right .content {
+    text-align: left;
+}
+
+.about-box .container h2 {
+    color: #24242C;
+}
+
+/* Até 620 px */
+
+@media screen and (max-width: 620px){
     .header .nav {
         display: flex;
         flex-direction: column;
@@ -234,6 +301,7 @@ body {
         border-bottom: 1px solid #505056;
     }
 
+    /* Serviços */
     .services-box {
         display: flex;
         justify-content: space-between;
@@ -244,14 +312,39 @@ body {
     .portifolio-content {
         display: flex;
         flex-direction: column;
-        gap: 10px
+        justify-content: space-between;
     }
 
+    /* Portifólio */
     .portifolio-content .content-columns {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .portifolio-content .content-columns .content-box{
+        justify-content: space-around;
+        width: 135px;
+        height: auto;
+        min-height: 170px;
+        padding: 10px 0;
+    }
+    .portifolio-content .content-columns .content-box .content-image{
+        padding: 0;
+        height: auto;
+    }
+
+    .portifolio-content .content-columns .content-box .content-image img{
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 620px) and (max-width: 880px) {
+    .portifolio-content .content-columns {
+        display: flex;
+        flex-direction: column;
         gap: 10px;
-        
     }
 
     .portifolio-content .content-columns .content-box{
@@ -269,5 +362,33 @@ body {
     .portifolio-content .content-columns .content-box .content-image img{
         width: 50%;
     }
+}
 
+@media screen and (max-width: 880px) {
+    /* Sobre */
+    .about-box .timeline::after {
+        left: 31px;
+    }
+
+    .about-box .container {
+        width: 73%;
+        padding-right: 25px;
+    }
+
+    .about-box .container::after {
+        right: 95%;
+    }
+
+    .about-box .container.left, .about-box .container.right  {
+        left: 31px;
+        padding-right: 0;
+    }
+
+    .about-box .right {
+        left: 0%;
+    }
+
+    .about-box .container.left .content {
+        text-align: left;
+    }
 }
