@@ -347,6 +347,25 @@ body {
     color: #fff;
 }
 
+/* Parcerias */
+.parcerias {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 35px auto;
+    width: 70%;
+}
+
+.parcerias .parceria-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parcerias .parceria-logo img {
+    width: 150px;
+}
+
 /* Responsividade */
 /* Até 620 px */
 
@@ -464,5 +483,37 @@ body {
 
     .about-box .container.left .content {
         text-align: left;
+    }
+
+    /* Time */
+
+    .team-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 50px;
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    /* Parcerias */
+    .parcerias {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 35px auto;
+        width: 70%;
+        gap: 30px;
+    }
+
+    .parcerias .parceria-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parcerias .parceria-logo img {
+        width: 150px;
+        max-height: 70px;
     }
 }
