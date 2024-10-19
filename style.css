@@ -444,6 +444,51 @@ body {
     cursor: pointer;
 }
 
+/* Footer */
+footer {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.footer-box {
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-socialmedias {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-socialmedias .socialmedia-icon {
+    background-color: #24242C;
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socialmedias .socialmedia-icon img {
+    color: #fff;
+}
+
+.footer-box .terms {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-box .terms a {
+    text-decoration: none;
+    color: #fbd711;
+}
+
 /* Responsividade */
 /* Até 620 px */
 
@@ -624,6 +669,15 @@ body {
         .contato-box .contato-form .contato-container input,
         .contato-box .contato-form .contato-container textarea {
             width: 15rem;
+        }
+
+        .footer-box {
+            margin: 0 auto;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
         }
     }
 }
